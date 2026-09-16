@@ -12,7 +12,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Главное",
+        "tab": "Введение",
         "groups": [
           {
             "group": "Начало работы",
@@ -26,8 +26,8 @@
           {
             "group": "Платформа",
             "pages": [
-              "glavnoe/enterprise",
               "glavnoe/providers",
+              "glavnoe/enterprise",
               "glavnoe/faq",
               "glavnoe/support"
             ]
@@ -35,22 +35,43 @@
         ]
       },
       {
-        "tab": "Гайды",
+        "tab": "Возможности",
         "groups": [
           {
-            "group": "Основы",
+            "group": "Модели и чат",
             "pages": [
               "gaidy/models",
               "gaidy/chat-completions",
-              "gaidy/media-input",
               "gaidy/provider-selection",
               "gaidy/tool-calling",
               "gaidy/structured-output",
-              "gaidy/plugins",
+              "gaidy/rag",
               "gaidy/web-search",
-              "gaidy/oauth-pkce",
               "gaidy/mcp",
-              "gaidy/rag"
+              "gaidy/oauth-pkce",
+              "gaidy/plugins",
+              "gaidy/media-input"
+            ]
+          },
+          {
+            "group": "Изображения",
+            "pages": [
+              "gaidy/gpt-5-image",
+              "gaidy/gpt-5-image-mini",
+              "gaidy/gpt-5-4-image-2",
+              "gaidy/gpt-image-1-5",
+              "gaidy/flux-2-pro",
+              "gaidy/flux-2-flex",
+              "gaidy/grok-imagine",
+              "gaidy/qwen-image",
+              "gaidy/seedream-3",
+              "gaidy/seedream-4",
+              "gaidy/seedream-4-5",
+              "gaidy/seedream-5-lite",
+              "gaidy/nanobanano",
+              "gaidy/nanobanano-pro",
+              "gaidy/nanobanano-2",
+              "gaidy/topaz-upscale"
             ]
           },
           {
@@ -69,41 +90,14 @@
             ]
           },
           {
-            "group": "Изображения",
-            "pages": [
-              "gaidy/topaz-upscale",
-              "gaidy/seedream-5-lite",
-              "gaidy/seedream-4-5",
-              "gaidy/seedream-4",
-              "gaidy/seedream-3",
-              "gaidy/flux-2-pro",
-              "gaidy/flux-2-flex",
-              "gaidy/grok-imagine",
-              "gaidy/qwen-image",
-              "gaidy/gpt-image-1-5",
-              "gaidy/gpt-5-image-mini",
-              "gaidy/gpt-5-image",
-              "gaidy/gpt-5-4-image-2",
-              "gaidy/nanobanano",
-              "gaidy/nanobanano-pro",
-              "gaidy/nanobanano-2"
-            ]
-          },
-          {
             "group": "Аудио и музыка",
             "pages": [
               "gaidy/elevenlabs-tts-turbo",
               "gaidy/elevenlabs-tts-multilingual",
               "gaidy/aiesa-transcribe",
-              "gaidy/suno-music",
-              "gaidy/google-lyria-3"
+              "gaidy/suno-music"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Особенности",
-        "groups": [
+          },
           {
             "group": "Особенности платформы",
             "pages": [
@@ -117,34 +111,7 @@
         ]
       },
       {
-        "tab": "Интеграции",
-        "groups": [
-          {
-            "group": "Инструменты и агенты",
-            "pages": [
-              "integracii/claude-code",
-              "integracii/claude-desktop",
-              "integracii/cline",
-              "integracii/codex",
-              "integracii/deepseek-harness",
-              "integracii/dify",
-              "integracii/gemini-cli",
-              "integracii/hermes-agent",
-              "integracii/kilo-code",
-              "integracii/langchain",
-              "integracii/n8n",
-              "integracii/openclaw",
-              "integracii/opencode",
-              "integracii/apia1-ide",
-              "integracii/proxy",
-              "integracii/roo-code",
-              "integracii/qwen-code"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Справочник",
+        "tab": "Справочник API",
         "groups": [
           {
             "group": "Основные endpoints",
@@ -195,6 +162,33 @@
               "api-reference/history/generations",
               "api-reference/other/balance",
               "api-reference/other/balance-v2"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Интеграции",
+        "groups": [
+          {
+            "group": "Инструменты и агенты",
+            "pages": [
+              "integracii/claude-code",
+              "integracii/claude-desktop",
+              "integracii/cline",
+              "integracii/codex",
+              "integracii/deepseek-harness",
+              "integracii/dify",
+              "integracii/gemini-cli",
+              "integracii/hermes-agent",
+              "integracii/kilo-code",
+              "integracii/langchain",
+              "integracii/n8n",
+              "integracii/openclaw",
+              "integracii/opencode",
+              "integracii/apia1-ide",
+              "integracii/proxy",
+              "integracii/roo-code",
+              "integracii/qwen-code"
             ]
           }
         ]
