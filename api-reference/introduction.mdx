@@ -1,0 +1,22 @@
+---
+title: Введение в API
+description: Обзор A1 API API и аутентификации
+---
+
+# Введение в API
+
+A1 API предоставляет REST API с OpenAI-совместимыми endpoints.
+
+## Base URL
+
+`https://apia1.com/api/v1`
+
+Все примеры в справочнике используют этот префикс. Endpoint указывается относительно него: `/chat/completions`, `/media`, `/models` и другие.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+Обрабатывайте 400/401/403/404 отдельно от временных 429/5xx. Для временных ошибок используйте ограниченный backoff.

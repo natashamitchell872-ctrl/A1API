@@ -1,0 +1,14 @@
+---
+title: Reasoning Tokens
+description: Настройка токенов рассуждений
+---
+
+# Reasoning Tokens
+
+Reasoning повышает качество сложных задач ценой дополнительных output tokens и latency.
+
+```json
+{"reasoning":{"effort":"high","max_tokens":1000,"summary":"auto"}}
+```
+
+Некоторые модели используют adaptive reasoning: `type: "adaptive"` и `effort_level`. Поддержка параметров зависит от семейства модели.

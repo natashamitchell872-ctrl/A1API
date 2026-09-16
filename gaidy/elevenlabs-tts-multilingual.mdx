@@ -1,0 +1,14 @@
+---
+title: ElevenLabs TTS Multilingual
+description: Многоязычный синтез речи
+---
+
+# ElevenLabs TTS Multilingual
+
+Многоязычный синтез речи.
+
+```bash
+curl -X POST "https://apia1.com/api/v1/audio/speech" -H "Authorization: Bearer <A1_API_KEY>" -H "Content-Type: application/json" -d '{"model":"<MODEL_ID>","input":"Добро пожаловать в A1 API","voice":"<VOICE_ID>"}' --output speech.mp3
+```
+
+Список voices, языков и аудиоформатов зависит от модели.

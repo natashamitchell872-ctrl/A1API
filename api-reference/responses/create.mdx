@@ -1,0 +1,30 @@
+---
+title: POST Responses
+description: Responses API с tools и streaming
+---
+
+# POST Responses
+
+**POST `/v1/responses`**
+
+Responses API с tools и streaming.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+## Параметры
+
+`model`, `input`, `instructions`, `tools`, `tool_choice`, `reasoning`, `max_output_tokens`, `previous_response_id`, `stream`.
+
+## Пример
+
+```bash
+curl -X POST "https://apia1.com/api/v1/responses" -H "Authorization: Bearer <A1_API_KEY>" -H "Content-Type: application/json" -d '{"model":"openai/gpt-4o","input":"Объясни RAG"}'
+```
+
+## Ошибки
+
+`400` — неверный запрос; `401` — auth; `403` — права; `404` — объект не найден; `429` — лимит; `5xx` — временная ошибка сервиса/provider.

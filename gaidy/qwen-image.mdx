@@ -1,0 +1,22 @@
+---
+title: Qwen Image
+description: Генерация и редактирование изображений
+---
+
+# Qwen Image
+
+Генерация и редактирование изображений.
+
+## Найти Model ID
+
+```bash
+curl "https://apia1.com/api/v1/models?type=image" -H "Authorization: Bearer <A1_API_KEY>"
+```
+
+## Генерация
+
+```bash
+curl -X POST "https://apia1.com/api/v1/media" -H "Authorization: Bearer <A1_API_KEY>" -H "Content-Type: application/json" -d '{"model":"<MODEL_ID>","input":{"prompt":"Футуристический город ночью","aspect_ratio":"16:9"}}'
+```
+
+Для image-to-image добавьте `image_url`, если модель поддерживает редактирование. Набор полей quality, seed, size, resolution и negative_prompt зависит от выбранного provider.

@@ -1,0 +1,14 @@
+---
+title: RAG
+description: Эмбеддинги, поиск и генерация одним ключом
+---
+
+# RAG
+
+RAG: chunking документов → embeddings → vector DB → similarity search → найденный контекст → chat model.
+
+```bash
+curl -X POST "https://apia1.com/api/v1/embeddings" -H "Authorization: Bearer <A1_API_KEY>" -H "Content-Type: application/json" -d '{"model":"text-embedding-3-small","input":"Текст документа"}'
+```
+
+Качество RAG зависит от chunking, metadata, фильтров доступа и reranking не меньше, чем от модели.

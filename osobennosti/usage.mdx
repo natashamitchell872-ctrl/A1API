@@ -1,0 +1,12 @@
+---
+title: Учет средств (Usage)
+description: Токены, стоимость и детализация использования
+---
+
+# Учет средств (Usage)
+
+```json
+{"usage":{"prompt_tokens":150,"completion_tokens":250,"total_tokens":400,"cost_rub":15.75,"prompt_tokens_details":{"cached_tokens":100},"completion_tokens_details":{"reasoning_tokens":50}}}
+```
+
+Для каждого запроса сохраняйте model, provider, prompt/completion tokens, cached/reasoning tokens и стоимость. В streaming usage часто приходит в конце.

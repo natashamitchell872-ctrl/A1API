@@ -1,0 +1,16 @@
+---
+title: Алиасы параметров
+description: provider, reasoning_effort и allow_fallbacks в строке model
+---
+
+# Алиасы параметров
+
+Формат: `<model>@<key>=<value>&<key>=<value>`.
+
+```text
+anthropic/claude-opus-4-6@provider=Amazon Bedrock
+minimax/minimax-m2.5@reasoning_effort=high
+minimax/minimax-m2.5@allow_fallbacks=false
+```
+
+Для сложного routing используйте обычный объект `provider`. Alias удобен клиентам, которые умеют менять только строку model.

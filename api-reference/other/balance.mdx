@@ -1,0 +1,30 @@
+---
+title: GET Balance
+description: Текущий баланс аккаунта
+---
+
+# GET Balance
+
+**GET `/v1/balance`**
+
+Текущий баланс аккаунта.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+## Параметры
+
+Параметры не требуются. Ответ — текущий баланс аккаунта и валюта.
+
+## Пример
+
+```bash
+curl -X GET "https://apia1.com/api/v1/balance" -H "Authorization: Bearer <A1_API_KEY>"
+```
+
+## Ошибки
+
+`400` — неверный запрос; `401` — auth; `403` — права; `404` — объект не найден; `429` — лимит; `5xx` — временная ошибка сервиса/provider.

@@ -1,0 +1,22 @@
+---
+title: Wan 2.6
+description: Генерация видео с Wan 2.6
+---
+
+# Wan 2.6
+
+Генерация видео с Wan 2.6.
+
+## Найти Model ID
+
+```bash
+curl "https://apia1.com/api/v1/models?type=video" -H "Authorization: Bearer <A1_API_KEY>"
+```
+
+## Запуск
+
+```bash
+curl -X POST "https://apia1.com/api/v1/media" -H "Authorization: Bearer <A1_API_KEY>" -H "Content-Type: application/json" -d '{"model":"<MODEL_ID>","input":{"prompt":"Кинематографичный пролёт камеры над городом","aspect_ratio":"16:9","duration":5}}'
+```
+
+Видео часто генерируется асинхронно. Сохраните `id` и проверяйте `GET /v1/media/{id}`. Параметры resolution, duration и references зависят от endpoint модели.

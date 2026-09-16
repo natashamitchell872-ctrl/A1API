@@ -1,0 +1,30 @@
+---
+title: POST Images Generations
+description: OpenAI-совместимая генерация изображений
+---
+
+# POST Images Generations
+
+**POST `/v2/images/generations`**
+
+OpenAI-совместимая генерация изображений.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+## Параметры
+
+`model`, `prompt`, `n`, `size`, `quality`, `response_format`, `output_format`, `background`.
+
+## Пример
+
+```bash
+curl -X POST "https://apia1.com/api/v2/images/generations" -H "Authorization: Bearer <A1_API_KEY>" -H "Content-Type: application/json" -d '{"model":"gpt-image-1","prompt":"Космический пейзаж","size":"1024x1024"}'
+```
+
+## Ошибки
+
+`400` — неверный запрос; `401` — auth; `403` — права; `404` — объект не найден; `429` — лимит; `5xx` — временная ошибка сервиса/provider.

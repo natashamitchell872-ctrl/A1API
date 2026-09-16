@@ -1,0 +1,16 @@
+---
+title: LangChain
+description: Chat, embeddings и RAG через один API
+---
+
+# LangChain
+
+Chat, embeddings и RAG через один API.
+
+```python
+from langchain_openai import ChatOpenAI
+llm=ChatOpenAI(model="openai/gpt-4o",api_key="<A1_API_KEY>",base_url="https://apia1.com/api/v1")
+print(llm.invoke("Привет").content)
+```
+
+Embeddings можно подключить через тот же base URL и embedding model из каталога.

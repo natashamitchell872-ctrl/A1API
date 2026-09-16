@@ -1,0 +1,14 @@
+---
+title: Вызов функций (Tool Calling)
+description: Использование функций и инструментов в запросах
+---
+
+# Вызов функций (Tool Calling)
+
+```json
+{"type":"function","function":{"name":"get_weather","description":"Получить погоду","parameters":{"type":"object","properties":{"city":{"type":"string"}},"required":["city"]}}}
+```
+
+Цикл: отправьте tools → получите `tool_calls` → выполните функцию на сервере → верните `tool` message с `tool_call_id` → снова вызовите модель.
+
+Всегда валидируйте arguments и права на выполнение операции.

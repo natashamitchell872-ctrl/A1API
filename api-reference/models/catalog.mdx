@@ -1,0 +1,30 @@
+---
+title: GET Models Catalog
+description: Каталог моделей с фильтрацией и пагинацией
+---
+
+# GET Models Catalog
+
+**GET `/v1/models/catalog`**
+
+Каталог моделей с фильтрацией и пагинацией.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+## Параметры
+
+Query: `type`, `provider`, `capability` — фильтры каталога; `page`, `limit` — пагинация; `sortBy`, `sortOrder` — сортировка.
+
+## Пример
+
+```bash
+curl -X GET "https://apia1.com/api/v1/models/catalog?type=image&page=1&limit=20" -H "Authorization: Bearer <A1_API_KEY>"
+```
+
+## Ошибки
+
+`400` — неверный запрос; `401` — auth; `403` — права; `404` — объект не найден; `429` — лимит; `5xx` — временная ошибка сервиса/provider.

@@ -1,0 +1,58 @@
+---
+title: Начало работы
+description: Регистрация, API-ключ и первые запросы
+---
+
+# Начало работы
+
+Регистрация, API-ключ и первые запросы.
+
+## 1. API Key
+
+Создайте ключ в панели A1 API и храните его в секретах окружения.
+
+## 2. OpenAI SDK
+
+```python
+from openai import OpenAI
+import os
+client=OpenAI(base_url="https://apia1.com/api/v1",api_key=os.environ["A1_API_KEY"])
+result=client.chat.completions.create(model="openai/gpt-4o",messages=[{"role":"user","content":"Что такое A1 API?"}])
+print(result.choices[0].message.content)
+```
+
+## 3. Каталог моделей
+
+```bash
+curl "https://apia1.com/api/v1/models" -H "Authorization: Bearer <A1_API_KEY>"
+```
+
+Перед production включите timeout, обработку 429/5xx и логирование usage.
+
+## 4. Первый запрос с streaming
+
+```python
+stream=client.chat.completions.create(
+    model="openai/gpt-4o",
+    messages=[{"role":"user","content":"Расскажи коротко об A1 API"}],
+    stream=True,
+)
+for chunk in stream:
+    if chunk.choices[0].delta.content:
+        print(chunk.choices[0].delta.content, end="")
+```
+
+## 5. Проверка ключа и баланса
+
+```bash
+curl "https://apia1.com/api/v1/models" -H "Authorization: Bearer $A1_API_KEY"
+curl "https://apia1.com/api/v1/balance" -H "Authorization: Bearer $A1_API_KEY"
+```
+
+Если запрос возвращает `401` — проверьте ключ; если `403` — доступ к модели не выдан; при `402`/`429` пополните баланс или снизьте частоту запросов.
+
+## 6. Что дальше
+
+- [Текстовые запросы](/gaidy/chat-completions)
+- [Получение списка моделей](/gaidy/models)
+- [Учет средств (Usage)](/osobennosti/usage)

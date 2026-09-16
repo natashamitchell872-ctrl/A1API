@@ -1,0 +1,17 @@
+---
+title: Текстовые запросы
+description: Запросы к текстовым моделям через Chat Completions API
+---
+
+# Текстовые запросы
+
+```bash
+curl -X POST "https://apia1.com/api/v1/chat/completions" \
+-H "Authorization: Bearer <A1_API_KEY>" \
+-H "Content-Type: application/json" \
+-d '{"model":"openai/gpt-4o","messages":[{"role":"user","content":"Объясни RAG"}],"temperature":0.3}'
+```
+
+Основные поля: `model`, `messages`, `temperature`, `top_p`, `max_tokens`, `stream`, `tools`, `response_format`, `reasoning`, `provider`, `plugins`.
+
+При streaming ответ приходит частями SSE; usage может появиться только в финальном событии.

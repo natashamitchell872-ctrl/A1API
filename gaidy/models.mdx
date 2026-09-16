@@ -1,0 +1,14 @@
+---
+title: Получение списка моделей
+description: Как получать и фильтровать доступные AI-модели
+---
+
+# Получение списка моделей
+
+```bash
+curl "https://apia1.com/api/v1/models" -H "Authorization: Bearer <A1_API_KEY>"
+```
+
+Полезные поля: `id`, `name`, `type`, `architecture`, `context_length`, `supported_parameters`, `pricing`, `endpoints`.
+
+Не храните capabilities и цены навсегда в коде: периодически обновляйте каталог.

@@ -1,0 +1,14 @@
+---
+title: Выбор провайдера
+description: Управление маршрутизацией между провайдерами
+---
+
+# Выбор провайдера
+
+```json
+{"provider":{"order":["OpenAI","Amazon Bedrock"],"allow_fallbacks":true}}
+```
+
+Поля routing: `order`, `only`, `ignore`, `sort`, `max_price`, `allow_fallbacks`. `sort` обычно принимает `price`, `latency` или `throughput`.
+
+В production fallback полезен для доступности; строгий `only` применяйте, когда важнее конкретный backend или политика данных.

@@ -1,0 +1,30 @@
+---
+title: POST Audio Speech
+description: Text-to-Speech
+---
+
+# POST Audio Speech
+
+**POST `/v1/audio/speech`**
+
+Text-to-Speech.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+## Параметры
+
+`model`, `input`, `voice`; дополнительно output format и speed, если поддерживаются.
+
+## Пример
+
+```bash
+curl -X POST "https://apia1.com/api/v1/audio/speech" -H "Authorization: Bearer <A1_API_KEY>" -H "Content-Type: application/json" -d '{"model":"<MODEL_ID>","input":"Привет","voice":"<VOICE_ID>"}' --output speech.mp3
+```
+
+## Ошибки
+
+`400` — неверный запрос; `401` — auth; `403` — права; `404` — объект не найден; `429` — лимит; `5xx` — временная ошибка сервиса/provider.

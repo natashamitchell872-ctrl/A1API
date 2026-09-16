@@ -1,0 +1,30 @@
+---
+title: POST Audio Transcriptions
+description: Speech-to-Text
+---
+
+# POST Audio Transcriptions
+
+**POST `/v1/audio/transcriptions`**
+
+Speech-to-Text.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+## Параметры
+
+Multipart: `file`, `model`; дополнительно language, response format и timestamps, если поддерживаются.
+
+## Пример
+
+```bash
+curl -X POST "https://apia1.com/api/v1/audio/transcriptions" -H "Authorization: Bearer <A1_API_KEY>" -F "model=<MODEL_ID>" -F "file=@audio.mp3"
+```
+
+## Ошибки
+
+`400` — неверный запрос; `401` — auth; `403` — права; `404` — объект не найден; `429` — лимит; `5xx` — временная ошибка сервиса/provider.

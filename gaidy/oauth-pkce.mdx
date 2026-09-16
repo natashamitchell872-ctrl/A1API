@@ -1,0 +1,10 @@
+---
+title: OAuth PKCE
+description: Авторизация пользователей по OAuth 2.0 PKCE
+---
+
+# OAuth PKCE
+
+PKCE предназначен для публичных клиентов, где нельзя безопасно хранить client secret. Клиент создаёт `code_verifier`, производит `code_challenge`, проходит authorization redirect и затем обменивает временный code на token.
+
+Проверяйте `state`, точный redirect URI и срок жизни token.

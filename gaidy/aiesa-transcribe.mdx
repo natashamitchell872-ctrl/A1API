@@ -1,0 +1,14 @@
+---
+title: Aiesa Транскрипция
+description: Асинхронная расшифровка аудио
+---
+
+# Aiesa Транскрипция
+
+Асинхронная расшифровка аудио.
+
+```bash
+curl -X POST "https://apia1.com/api/v1/audio/transcriptions" -H "Authorization: Bearer <A1_API_KEY>" -F "model=<MODEL_ID>" -F "file=@meeting.mp3"
+```
+
+Если модель поддерживает timestamps или diarization, запросите их отдельными параметрами.

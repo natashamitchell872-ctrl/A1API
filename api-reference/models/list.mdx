@@ -1,0 +1,30 @@
+---
+title: GET Models
+description: Список доступных моделей
+---
+
+# GET Models
+
+**GET `/v1/models`**
+
+Список доступных моделей.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+## Параметры
+
+Параметры не требуются. Ответ — список моделей с идентификаторами, capabilities и pricing.
+
+## Пример
+
+```bash
+curl -X GET "https://apia1.com/api/v1/models" -H "Authorization: Bearer <A1_API_KEY>"
+```
+
+## Ошибки
+
+`400` — неверный запрос; `401` — auth; `403` — права; `404` — объект не найден; `429` — лимит; `5xx` — временная ошибка сервиса/provider.

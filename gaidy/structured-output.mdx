@@ -1,0 +1,12 @@
+---
+title: Структурный вывод
+description: Получение JSON по заданной схеме
+---
+
+# Структурный вывод
+
+```json
+{"response_format":{"type":"json_schema","json_schema":{"name":"contact","strict":true,"schema":{"type":"object","properties":{"name":{"type":"string"},"email":{"type":["string","null"]}},"required":["name","email"],"additionalProperties":false}}}}
+```
+
+Используйте `enum` для фиксированных вариантов и `additionalProperties:false` для строгой структуры. Клиент всё равно должен обрабатывать отказ модели и ошибку валидации.

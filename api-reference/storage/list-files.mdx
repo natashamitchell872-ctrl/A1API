@@ -1,0 +1,30 @@
+---
+title: Список файлов
+description: Список файлов с фильтрацией и пагинацией
+---
+
+# Список файлов
+
+**GET `/v1/storage/files`**
+
+Список файлов с фильтрацией и пагинацией.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+## Параметры
+
+Query: `page`, `limit`, `fileType`, `source`, `storagePolicy`, `externalUserId`, `sortBy`, `sortOrder`.
+
+## Пример
+
+```bash
+curl "https://apia1.com/api/v1/storage/files?fileType=IMAGE&page=1&limit=10" -H "Authorization: Bearer <A1_API_KEY>"
+```
+
+## Ошибки
+
+`400` — неверный запрос; `401` — auth; `403` — права; `404` — объект не найден; `429` — лимит; `5xx` — временная ошибка сервиса/provider.

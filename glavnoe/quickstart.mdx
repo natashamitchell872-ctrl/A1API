@@ -1,0 +1,30 @@
+---
+title: Быстрый старт
+description: Начните работу за несколько минут
+---
+
+# Быстрый старт
+
+Начните работу за несколько минут.
+
+## 1. API Key
+
+Создайте ключ в панели A1 API и храните его в секретах окружения.
+
+## 2. OpenAI SDK
+
+```python
+from openai import OpenAI
+import os
+client=OpenAI(base_url="https://apia1.com/api/v1",api_key=os.environ["A1_API_KEY"])
+result=client.chat.completions.create(model="openai/gpt-4o",messages=[{"role":"user","content":"Что такое A1 API?"}])
+print(result.choices[0].message.content)
+```
+
+## 3. Каталог моделей
+
+```bash
+curl "https://apia1.com/api/v1/models" -H "Authorization: Bearer <A1_API_KEY>"
+```
+
+Перед production включите timeout, обработку 429/5xx и логирование usage.

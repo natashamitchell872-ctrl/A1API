@@ -1,53 +1,221 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "A1 API",
+  "description": "Единый API для сотен нейросетей: текст, изображения, видео, аудио и эмбеддинги",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#3EA4EC",
+    "light": "#7CC4F5",
+    "dark": "#0E72BC"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "tab": "Главное",
+        "groups": [
+          {
+            "group": "Начало работы",
+            "pages": [
+              "index",
+              "glavnoe/quickstart",
+              "gaidy/getting-started",
+              "glavnoe/principles"
+            ]
+          },
+          {
+            "group": "Платформа",
+            "pages": [
+              "glavnoe/enterprise",
+              "glavnoe/providers",
+              "glavnoe/faq",
+              "glavnoe/support"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Гайды",
+        "groups": [
+          {
+            "group": "Основы",
+            "pages": [
+              "gaidy/models",
+              "gaidy/chat-completions",
+              "gaidy/media-input",
+              "gaidy/provider-selection",
+              "gaidy/tool-calling",
+              "gaidy/structured-output",
+              "gaidy/plugins",
+              "gaidy/web-search",
+              "gaidy/oauth-pkce",
+              "gaidy/mcp",
+              "gaidy/rag"
+            ]
+          },
+          {
+            "group": "Видео",
+            "pages": [
+              "gaidy/gemini-omni-video",
+              "gaidy/seedance-1-5-pro",
+              "gaidy/seedance-2",
+              "gaidy/kling-3",
+              "gaidy/kling-3-motion-control",
+              "gaidy/kling-2-6-motion-control",
+              "gaidy/kling-2-5-turbo",
+              "gaidy/veo-3-1",
+              "gaidy/wan-2-6",
+              "gaidy/wan-2-5"
+            ]
+          },
+          {
+            "group": "Изображения",
+            "pages": [
+              "gaidy/topaz-upscale",
+              "gaidy/seedream-5-lite",
+              "gaidy/seedream-4-5",
+              "gaidy/seedream-4",
+              "gaidy/seedream-3",
+              "gaidy/flux-2-pro",
+              "gaidy/flux-2-flex",
+              "gaidy/grok-imagine",
+              "gaidy/qwen-image",
+              "gaidy/gpt-image-1-5",
+              "gaidy/gpt-5-image-mini",
+              "gaidy/gpt-5-image",
+              "gaidy/gpt-5-4-image-2",
+              "gaidy/nanobanano",
+              "gaidy/nanobanano-pro",
+              "gaidy/nanobanano-2"
+            ]
+          },
+          {
+            "group": "Аудио и музыка",
+            "pages": [
+              "gaidy/elevenlabs-tts-turbo",
+              "gaidy/elevenlabs-tts-multilingual",
+              "gaidy/aiesa-transcribe",
+              "gaidy/suno-music",
+              "gaidy/google-lyria-3"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Особенности",
+        "groups": [
+          {
+            "group": "Особенности платформы",
+            "pages": [
+              "osobennosti/privacy",
+              "osobennosti/reasoning-tokens",
+              "osobennosti/caching",
+              "osobennosti/usage",
+              "osobennosti/aliases"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Интеграции",
+        "groups": [
+          {
+            "group": "Инструменты и агенты",
+            "pages": [
+              "integracii/claude-code",
+              "integracii/claude-desktop",
+              "integracii/cline",
+              "integracii/codex",
+              "integracii/deepseek-harness",
+              "integracii/dify",
+              "integracii/gemini-cli",
+              "integracii/hermes-agent",
+              "integracii/kilo-code",
+              "integracii/langchain",
+              "integracii/n8n",
+              "integracii/openclaw",
+              "integracii/opencode",
+              "integracii/apia1-ide",
+              "integracii/proxy",
+              "integracii/roo-code",
+              "integracii/qwen-code"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Справочник",
+        "groups": [
+          {
+            "group": "Основные endpoints",
+            "pages": [
+              "api-reference/introduction",
+              "api-reference/chat/completions",
+              "api-reference/responses/create",
+              "api-reference/images/generations"
+            ]
+          },
+          {
+            "group": "Медиа",
+            "pages": [
+              "api-reference/media/create",
+              "api-reference/media/status",
+              "api-reference/media/operations"
+            ]
+          },
+          {
+            "group": "Аудио",
+            "pages": [
+              "api-reference/audio/transcriptions",
+              "api-reference/audio/speech"
+            ]
+          },
+          {
+            "group": "Модели и эмбеддинги",
+            "pages": [
+              "api-reference/models/list",
+              "api-reference/models/catalog",
+              "api-reference/embeddings/create"
+            ]
+          },
+          {
+            "group": "Хранилище",
+            "pages": [
+              "api-reference/storage/upload",
+              "api-reference/storage/list-files",
+              "api-reference/storage/get-file",
+              "api-reference/storage/delete-file",
+              "api-reference/storage/keep",
+              "api-reference/storage/stats"
+            ]
+          },
+          {
+            "group": "История и баланс",
+            "pages": [
+              "api-reference/history/generations",
+              "api-reference/other/balance",
+              "api-reference/other/balance-v2"
+            ]
+          }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Поддержка",
+        "href": "/glavnoe/support"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Панель A1 API",
+      "href": "https://apia1.com"
     }
   },
   "contextual": {
@@ -62,11 +230,11 @@
       "vscode"
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+  "background": {
+    "decoration": "gradient",
+    "color": {
+      "light": "#FAFCFF",
+      "dark": "#1E1E1E"
     }
   }
 }

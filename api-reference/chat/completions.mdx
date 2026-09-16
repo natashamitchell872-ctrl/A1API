@@ -1,0 +1,30 @@
+---
+title: POST Chat Completions
+description: Основной endpoint для генерации текста и диалогов
+---
+
+# POST Chat Completions
+
+**POST `/v1/chat/completions`**
+
+Основной endpoint для генерации текста и диалогов.
+
+## Авторизация
+
+```http
+Authorization: Bearer <A1_API_KEY>
+```
+
+## Параметры
+
+`model`, `messages`, `temperature`, `max_tokens`, `stream`, `tools`, `response_format`, `reasoning`, `provider`, `plugins`.
+
+## Пример
+
+```bash
+curl -X POST "https://apia1.com/api/v1/chat/completions" -H "Authorization: Bearer <A1_API_KEY>" -H "Content-Type: application/json" -d '{"model":"openai/gpt-4o","messages":[{"role":"user","content":"Привет"}]}'
+```
+
+## Ошибки
+
+`400` — неверный запрос; `401` — auth; `403` — права; `404` — объект не найден; `429` — лимит; `5xx` — временная ошибка сервиса/provider.
